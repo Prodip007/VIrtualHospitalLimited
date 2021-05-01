@@ -1,0 +1,270 @@
+{% extends 'doctor/base.html' %}
+{% load static %}
+{% block hero %}
+    <section class="hero" id="hero">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <a class="hero-brand" href="{% url 'doctors:index' %}" title="Home"><img alt="VHL Logo" src="{% static 'doctor/img/hospital_logo.png' %}"></a>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <h1>
+            A hospital which cares about the people.
+          </h1>
+
+        <p class="tagline">
+          This is the most advanced and people friendly hospital in Bangladesh
+        </p>
+        <a class="btn btn-full" href="{% url 'doctors:appointment' %}">Get an appointment</a>
+      </div>
+    </div>
+
+  </section>
+  <!-- /Hero -->
+{% endblock %}
+
+{% block body %}
+  <!-- About -->
+
+  <section class="about" id="about">
+    <div class="container text-center">
+      <h2>
+          About Virtual Hospital Limited
+        </h2>
+
+      <p>
+        This is the most advanced and people friendly hospital in Bangladesh.<br>
+        We use many cutting edge technology for medication.
+        We have the fastest response to any kind of emergency situations and the
+        professionals and employees here are very people friendly and cordial
+        We try to keep the medical expenses as <strong>cheap</strong> as possible.
+        We try to provide <h3>Free Health Care and Medications</h3> for the poor.
+
+      <div class="row stats-row">
+        <div class="stats-col text-center col-md-3 col-sm-6">
+          <div class="circle">
+            <span class="stats-no" data-toggle="counter-up">1750</span> Current patients in treatment
+          </div>
+        </div>
+
+        <div class="stats-col text-center col-md-3 col-sm-6">
+          <div class="circle">
+            <span class="stats-no" data-toggle="counter-up">3570</span> Free Health Care
+          </div>
+        </div>
+
+        <div class="stats-col text-center col-md-3 col-sm-6">
+          <div class="circle">
+            <span class="stats-no" data-toggle="counter-up">6</span> Current Doctors
+          </div>
+        </div>
+
+        <div class="stats-col text-center col-md-3 col-sm-6">
+          <div class="circle">
+            <span class="stats-no" data-toggle="counter-up">15</span> Hard Workers
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /About -->
+
+    <!-- Parallax -->
+
+  <div class="block bg-primary block-pd-lg block-bg-overlay text-center" data-bg-img="img/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
+    <h2>
+        Welcome to Virtual Hospital Limited
+      </h2>
+
+    <p>
+      This is the most effective and responsive hospital in Bangladesh
+    </p>
+    <img alt="Virtual Hospital Limited" class="gadgets-img hidden-md-down" src="{% static 'doctor/img/parallax pic.jpg' %}">
+  </div>
+  <!-- /Parallax -->
+
+    <!-- Call to Action -->
+
+  <section class="cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-sm-12 text-lg-left text-center">
+          <h2>
+              Call to Action
+            </h2>
+
+          <p>
+            Just click this button to make an appointment
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+          <a class="btn btn-ghost" href="{% url 'doctors:appointment' %}">Get an appointment today!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Call to Action -->
+
+
+  <!-- Portfolio -->
+
+  <section class="portfolio" id="portfolio">
+    <div class="container text-center">
+      <h2>
+          Some precious moments
+        </h2>
+
+      <p>
+        We are very happy to see the smiles of our patients. This is the reason our doctors and staffs work very hard without any hesitation. These pictures
+          show us how passionate they are.
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="{% static 'doctor/img/portfolio 1.jpg' %}">
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Doctor checking the results
+                  </h3>
+
+                  <p class="card-text">
+                    She is conscious about one of her patients.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="{% static 'doctor/img/portfolio 2.jpg' %}">
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Doctors in the Operation Theatre
+                  </h3>
+
+                  <p class="card-text">
+                    Perfect precision must be maintained to complete a successful surgery.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+           <img alt="" src="{% static 'doctor/img/portfolio 3.jpg' %}">
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Doctor and his patient
+                  </h3>
+
+                  <p class="card-text">
+                    Visiting his patients to check the improvement after treatment.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="{% static 'doctor/img/portfolio 4.jpg' %}">
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Preparing for the next surgery
+                  </h3>
+
+                  <p class="card-text">
+                    Before every surgery a perfect preparation must take place.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="{% static 'doctor/img/portfolio 5.jpg' %}">
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Happy doctor
+                  </h3>
+
+                  <p class="card-text">
+                    When patients gets better, that is the most satisfying moment for a doctor.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="{% static 'doctor/img/portfolio 6.jpg' %}">
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Doctors at duty
+                  </h3>
+
+                  <p class="card-text">
+                    It is very tiresome to work as a doctor specially at the surgery room.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="{% static 'doctor/img/portfolio 7.jpg' %}">
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Mother and daughter
+                  </h3>
+
+                  <p class="card-text">
+                    For our free health care services many elderly are receiving profound treatment without being a burden on their children.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+          <div class="card card-block">
+            <img alt="" src="{% static 'doctor/img/portfolio 8.jpg' %}">
+              <div class="portfolio-over">
+                <div>
+                  <h3 class="card-title">
+                    Complex operations
+                  </h3>
+
+                  <p class="card-text">
+                    Here every doctor works as an unit when it is the question of someone's life.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Portfolio -->
+
+{% endblock %}

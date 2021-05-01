@@ -1,0 +1,15 @@
+{% extends 'Doctor/base.html' %}
+
+{% block body %}
+
+    <div class="col-lg-12" style="margin: 10%">
+
+        <h2 class="text-success">Your appointment request has been submitted successfully.</h2>
+        <p>Click the button below to check out the current status of your appointment</p><br>
+        <a href="{% url 'doctors:submitted' %}">
+            <div class="btn">Today's appointment list </div>
+        </a>
+    </div>
+
+
+{% endblock %}

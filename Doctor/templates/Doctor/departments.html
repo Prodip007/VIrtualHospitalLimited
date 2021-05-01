@@ -1,0 +1,31 @@
+{% extends 'doctor/base.html' %}
+{% load static %}
+
+{% block body %}
+  <!-- Features -->
+
+<section class="features" id="features">
+    <div class="container">
+        <h2 class="text-center"> Departments </h2>
+        <div class="row">
+{% for items in category %}
+        <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+                <div>
+                    <div class="feature-icon">
+                    <span class="fa fa-group"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="{% url 'doctors:department_details' items.id %}"><strong>{{ items.name }}</strong></a>
+                    <p>{{ items.description }}</p>
+                </div>
+            </div>
+        </div>
+{% endfor %}
+    </div>
+    </div>
+</section>
+  <!-- /Features -->
+{% endblock %}

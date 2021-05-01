@@ -1,0 +1,55 @@
+{% extends 'doctor/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+{% block style %}
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'doctor/css/table.css' %}">
+{% endblock %}
+</head>
+<body>
+{% block body %}
+
+  <div class="container" id="table">
+    <h2 style="margin: 10%">Appointment List</h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Id</div>
+        <div class="col col-2">Patient Name</div>
+        <div class="col col-3">Preferred Doctor</div>
+        <div class="col col-4">Status</div>
+        <!--<div class="col col-5">Action</div>-->
+      </li>
+     {% for item in appointments %}
+      <li class="table-row">
+        <div class="col col-1" data-label="Id">{{ item.id }}</div>
+        <div class="col col-2" data-label="Patient Name">{{ item.name }}</div>
+        <div class="col col-3" data-label="Preferred Doctor">{{ item.preferred_doctor }}</div>
+        <div class="col col-4" data-label="Status">{{ item.status }}</div>
+        <!--
+          <div class="col col-5">
+            <form action="{#% url 'doctors:appointment_delete' item.id %#}" method="post" style="display: inline;">
+            {#% csrf_token %#}
+            <input id="del" type="hidden" name="appointment_id" value="Delete"/>
+              <button id="del" type="button"><i class="fa fa-trash"></i></button>
+        </form>
+
+            <form action="{#% url 'doctors:appointment_update' item.id %#}" method="get" style="display: inline;">
+            {#% csrf_token %#}
+            <input id="edi" type="hidden" name="appointment_id" value="Edit"/>
+              <button id="edi" type="button"><i class="fa fa-edit"></i></button>
+        </form>
+        </div>-->
+      </li>
+     {% endfor %}
+
+    </ul>
+  </div>
+{% endblock %}
+</body>
+</html>

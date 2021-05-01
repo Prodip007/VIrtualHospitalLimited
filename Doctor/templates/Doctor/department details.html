@@ -1,0 +1,48 @@
+{% extends 'doctor/base.html' %}
+
+
+
+  <!-- Team -->
+{% block body %}
+  <section class="team" id="team">
+    <div class="container">
+      <h2 class="text-center">
+          Meet our team
+        </h2>
+
+      <div class="row">
+{% for items in department %}
+        <div class="col-sm-3 col-xs-6">
+
+          <div class="card card-block">
+            <a href="{% url 'doctors:doctor_details' items.Name %}"><img alt="" class="team-img" src="{{ items.Image.url }}">
+              <div class="card-title-wrap">
+                <span class="card-title">{{ items.Name }}</span> <span class="card-text">{{ items.Specialized }}<br>{{ items.Degree }}</span><br>
+                  <h4>Visiting hour: <br>{{ items.Time }}</h4>
+                  <h4>Room No: {{ items.Room_no }}</h4>
+                  <h4>Fees: {{ items.Fees }}</h4>
+              </div>
+
+              <div class="team-over">
+                <h4 class="hidden-md-down">
+                  Click to learn more
+                </h4>
+
+                <nav class="social-nav">
+                  <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+            </nav>
+
+            <p>
+              A world class {{ items.Specialized }}
+            </p>
+          </div>
+          </a>
+        </div>
+      </div>
+{% endfor %}
+
+    </div>
+    </div>
+  </section>
+  <!-- /Team -->
+{% endblock %}
